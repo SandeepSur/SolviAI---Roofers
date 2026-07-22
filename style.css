@@ -1471,6 +1471,17 @@ body.loaded .artwork-container {
 
 .footer-contact-link {
     margin-bottom: 16px;
+    display: inline-block;
+}
+
+.footer-address {
+    color: #F2F0EA;
+    font-family: var(--font-mono);
+    font-size: 14px;
+    font-style: normal;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    opacity: 0.8;
 }
 
 .footer-cta-link {
