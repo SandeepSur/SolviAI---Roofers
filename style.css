@@ -2014,3 +2014,18 @@ body.loaded .artwork-container {
     width: 100%;
     justify-content: center;
 }
+
+/* --- Footer Legal Verification --- */
+.footer-legal-verification {
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-color);
+    padding: 40px 20px 0;
+    max-width: 900px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 1.6;
+}
