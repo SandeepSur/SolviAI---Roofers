@@ -2151,22 +2151,26 @@ body.loaded .artwork-container {
 }
 
 .lead-form-card .checkmark {
-    background-color: #111;
-    border-color: #555;
+    background-color: #1a1a1a !important;
+    border: 1px solid #666 !important;
+    min-width: 20px !important;
+    min-height: 20px !important;
+    border-radius: 2px !important;
 }
 
 .lead-form-card .checkbox-container:hover input ~ .checkmark {
-    border-color: #888;
+    border-color: #aaa !important;
 }
 
 .lead-form-card .checkbox-container input:checked ~ .checkmark {
-    background-color: #fff;
-    border-color: #fff;
+    background-color: #fff !important;
+    border-color: #fff !important;
 }
 
 .lead-form-card .checkbox-container .checkmark:after {
-    border-right-color: #111;
-    border-bottom-color: #111;
+    border-right-color: #111 !important;
+    border-bottom-color: #111 !important;
+    border-width: 0 2px 2px 0 !important;
 }
 
 /* Fix intl-tel-input full width */
