@@ -2029,3 +2029,188 @@ body.loaded .artwork-container {
     letter-spacing: 0.05em;
     line-height: 1.6;
 }
+
+/* --- Lead Capture Section --- */
+.lead-capture-section {
+    background-color: #111111;
+    color: #f7f6f2;
+    padding: 100px 0;
+    border-top: 1px solid #222;
+}
+
+.lead-capture-section .section-header {
+    margin-bottom: 60px;
+}
+
+.lead-capture-section .section-heading {
+    color: #ffffff;
+}
+
+.lead-capture-section .section-eyebrow {
+    color: #a3a3a3;
+    border-color: #333;
+}
+
+.lead-capture-section .section-supporting {
+    color: #cccccc;
+}
+
+.lead-capture-content {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.lead-form-card {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    padding: 48px;
+    border-radius: 4px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.lead-form-card .form-group {
+    margin-bottom: 24px;
+    text-align: left;
+}
+
+.lead-form-card .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #f7f6f2;
+    opacity: 0.9;
+}
+
+.form-select,
+.form-textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #444;
+    background: #111;
+    font-family: var(--font-mono);
+    font-size: 15px;
+    color: #fff;
+    border-radius: 2px;
+    transition: border-color 0.2s ease;
+}
+
+.form-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px top 50%;
+    background-size: 10px auto;
+}
+
+.lead-form-card input[type="text"],
+.lead-form-card input[type="email"],
+.lead-form-card input[type="url"],
+.lead-form-card input[type="tel"] {
+    width: 100%;
+    background: #111;
+    border: 1px solid #444;
+    color: #fff;
+    padding: 14px 16px;
+    font-family: var(--font-mono);
+    font-size: 15px;
+    border-radius: 2px;
+    transition: border-color 0.2s ease;
+}
+
+.lead-form-card input:focus,
+.form-select:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: #888;
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-row.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.checkbox-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 12px;
+}
+
+.lead-form-card .checkbox-container .consent-text {
+    color: #ccc;
+    font-size: 14px;
+}
+
+.lead-form-card .checkmark {
+    background-color: #111;
+    border-color: #555;
+}
+
+.lead-form-card .checkbox-container:hover input ~ .checkmark {
+    border-color: #888;
+}
+
+.lead-form-card .checkbox-container input:checked ~ .checkmark {
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.lead-form-card .checkbox-container .checkmark:after {
+    border-right-color: #111;
+    border-bottom-color: #111;
+}
+
+/* Fix intl-tel-input full width */
+.phone-input-wrapper .iti {
+    width: 100%;
+}
+.phone-input-wrapper .iti__country-list {
+    background-color: #1a1a1a;
+    border-color: #444;
+    color: #fff;
+}
+.phone-input-wrapper .iti__country.iti__highlight {
+    background-color: #333;
+}
+.phone-input-wrapper .iti__divider {
+    border-bottom: 1px solid #444;
+}
+.phone-input-wrapper .iti__selected-dial-code {
+    color: #fff;
+}
+
+.button-subtext {
+    text-align: center;
+    font-size: 12px;
+    color: #888;
+    margin-top: 16px;
+    font-family: var(--font-mono);
+}
+
+.lead-success {
+    background-color: #1a1a1a;
+    border-color: #333;
+}
+
+.lead-success h3 {
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .form-row.two-col {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .lead-form-card {
+        padding: 24px;
+    }
+}
