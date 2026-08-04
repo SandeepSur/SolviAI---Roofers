@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -584,150 +584,7 @@
             </div>
 
             <div class="lead-capture-content">
-                <div class="form-card lead-form-card" id="leadFormCard">
-                    <form id="leadCaptureForm" onsubmit="return handleLeadSubmit(event)">
-                        
-                        <div class="form-row two-col">
-                            <div class="form-group">
-                                <label for="leadPosition">What Is Your Position? <span aria-hidden="true">*</span></label>
-                                <select id="leadPosition" name="leadPosition" required class="form-select">
-                                    <option value="" disabled selected>Select an option</option>
-                                    <option value="Owner">Owner</option>
-                                    <option value="General Manager">General Manager</option>
-                                    <option value="Office Manager">Office Manager</option>
-                                    <option value="Sales Manager">Sales Manager</option>
-                                    <option value="Marketing Manager">Marketing Manager</option>
-                                    <option value="Other">Other</option>
-                                </select>
-                            </div>
 
-                            <div class="form-group">
-                                <label for="leadJobs">Roofing Jobs Completed Last Month? <span aria-hidden="true">*</span></label>
-                                <select id="leadJobs" name="leadJobs" required class="form-select">
-                                    <option value="" disabled selected>Select an option</option>
-                                    <option value="0-10">0–10 jobs</option>
-                                    <option value="11-25">11–25 jobs</option>
-                                    <option value="26-50">26–50 jobs</option>
-                                    <option value="51-100">51–100 jobs</option>
-                                    <option value="100+">More than 100 jobs</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="leadMarketing">What Are Your Current Marketing Efforts? <span aria-hidden="true">*</span></label>
-                            <textarea id="leadMarketing" name="leadMarketing" required class="form-textarea" placeholder="Example: Google Ads, Facebook Ads, referrals, Local Services Ads, SEO, door knocking, or lead-generation companies."></textarea>
-                        </div>
-
-                        <div class="form-row two-col">
-                            <div class="form-group">
-                                <label for="leadCompany">Roofing Company Name <span aria-hidden="true">*</span></label>
-                                <input type="text" id="leadCompany" name="leadCompany" required placeholder="Business name as shown on Google">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="leadWebsite">Website URL <span aria-hidden="true">*</span></label>
-                                <input type="url" id="leadWebsite" name="leadWebsite" required placeholder="https://yourroofingcompany.com">
-                            </div>
-                        </div>
-
-                        <div class="form-row two-col">
-                            <div class="form-group">
-                                <label for="leadName">Full Name <span aria-hidden="true">*</span></label>
-                                <input type="text" id="leadName" name="leadName" required placeholder="Your full name">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="leadEmail">Business Email <span aria-hidden="true">*</span></label>
-                                <input type="email" id="leadEmail" name="leadEmail" required placeholder="name@company.com">
-                            </div>
-                        </div>
-                        
-                        <div class="form-group phone-group-container">
-                            <label for="leadPhone">Phone Number — Optional</label>
-                            <div class="phone-input-wrapper">
-                                <input type="tel" id="leadPhone" name="leadPhone">
-                            </div>
-                        </div>
-
-                        <div class="form-group checkbox-group-container">
-                            <label>What Do You Need Help With? <span aria-hidden="true">*</span></label>
-                            <div class="checkbox-grid">
-                                <label class="checkbox-container">
-                                    <input type="checkbox" name="helpNeeded" value="Automated Google Review Requests" class="help-checkbox">
-                                    <span class="checkmark"></span>
-                                    <span class="consent-text">Automated Google Review Requests</span>
-                                </label>
-                                <label class="checkbox-container">
-                                    <input type="checkbox" name="helpNeeded" value="Review Follow-Up Reminders" class="help-checkbox">
-                                    <span class="checkmark"></span>
-                                    <span class="consent-text">Review Follow-Up Reminders</span>
-                                </label>
-                                <label class="checkbox-container">
-                                    <input type="checkbox" name="helpNeeded" value="Past Customer Review Reactivation" class="help-checkbox">
-                                    <span class="checkmark"></span>
-                                    <span class="consent-text">Past Customer Review Reactivation</span>
-                                </label>
-                                <label class="checkbox-container">
-                                    <input type="checkbox" name="helpNeeded" value="Automatic Google Review Replies" class="help-checkbox">
-                                    <span class="checkmark"></span>
-                                    <span class="consent-text">Automatic Google Review Replies</span>
-                                </label>
-                                <label class="checkbox-container">
-                                    <input type="checkbox" name="helpNeeded" value="Complete Google Reputation System" class="help-checkbox">
-                                    <span class="checkmark"></span>
-                                    <span class="consent-text">Complete Google Reputation System</span>
-                                </label>
-                            </div>
-                            <div id="helpError" class="error-text" style="display: none; color: #ff4d4d; font-size: 13px; margin-top: 12px;">Please select at least one option.</div>
-                        </div>
-
-                        <div class="consent-group" style="margin-top: 32px; border-top: 1px solid var(--border-color); padding-top: 32px; background: transparent; border: none;">
-                            <label class="checkbox-container">
-                                <input type="checkbox" id="legalAcceptance" name="legalAcceptance">
-                                <span class="checkmark"></span>
-                                <span class="consent-text" style="color: #fff;">By checking this box, I agree to SolviAI’s <a href="/privacy-policy" target="_blank" style="color: #4da6ff; text-decoration: underline; text-underline-offset: 2px;">Privacy Policy</a> and <a href="/terms-and-conditions" target="_blank" style="color: #4da6ff; text-decoration: underline; text-underline-offset: 2px;">Terms and Conditions</a>.</span>
-                            </label>
-                            <div id="legalError" class="error-text" style="display: none; color: #ff4d4d; font-size: 13px; margin-top: 12px;">Please agree to the Privacy Policy and Terms and Conditions to continue.</div>
-                        </div>
-
-                        <div class="consent-blocks" id="consentBlocks" style="display: none; border-top: 1px solid var(--border-color); padding-top: 32px; margin-top: 32px;">
-                            <div class="consent-group">
-                                <label class="checkbox-container">
-                                    <input type="checkbox" id="leadConsentService" name="leadConsentService">
-                                    <span class="checkmark"></span>
-                                    <span class="consent-text">By checking this box and providing my phone number, I agree to receive non-marketing text messages from SolviAI regarding my enquiry, appointments, account updates, service notifications, customer support, and requested services. Message frequency may vary. Message and data rates may apply. Reply STOP to opt out or HELP for assistance.</span>
-                                </label>
-                                <div class="legal-links-inline" style="justify-content: flex-start; margin-top: 12px; margin-left: 36px; margin-bottom: 0;">
-                                    <a href="/privacy-policy" target="_blank">Privacy Policy &rarr;</a>
-                                    <a href="/terms-and-conditions" target="_blank">Terms and Conditions &rarr;</a>
-                                </div>
-                            </div>
-                            
-                            <div class="consent-group">
-                                <label class="checkbox-container">
-                                    <input type="checkbox" id="leadConsentMarketing" name="leadConsentMarketing">
-                                    <span class="checkmark"></span>
-                                    <span class="consent-text">By checking this box, I consent to receive marketing and promotional text messages from SolviAI, including service offers, product updates, discounts, and related business communications. Message frequency may vary. Message and data rates may apply. Reply STOP to opt out or HELP for assistance.</span>
-                                </label>
-                            </div>
-                        </div>
-
-                        <button type="submit" class="cta-btn primary full-width" style="margin-top: 16px;">
-                            <span class="bracket tl"></span>
-                            <span class="bracket tr"></span>
-                            <span class="bracket bl"></span>
-                            <span class="bracket br"></span>
-                            Get My Free Review System Audit
-                        </button>
-                        <p class="button-subtext">No obligation. We’ll review your current Google presence and contact you about the services you requested.</p>
-                    </form>
-                </div>
-
-                <div class="success-message lead-success" id="leadSuccessMessage" style="display: none;">
-                    <h3>Thank you!</h3>
-                    <p>Your request has been received. The SolviAI team will review your roofing company’s current Google presence and contact you shortly.</p>
-                </div>
             </div>
         </div>
     </section>
@@ -787,57 +644,7 @@
     </footer>
 
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
-    <script src="script.js"></script>
-    <script>
-        const phoneInputField = document.querySelector("#leadPhone");
-        const phoneInput = window.intlTelInput(phoneInputField, {
-            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
-            preferredCountries: ["us", "gb", "ca", "au", "in"],
-        });
 
-        // Show consent blocks if phone number is not empty
-        phoneInputField.addEventListener("input", function() {
-            const consentBlocks = document.getElementById("consentBlocks");
-            if (phoneInputField.value.trim() !== "") {
-                consentBlocks.style.display = "block";
-            } else {
-                consentBlocks.style.display = "none";
-                document.getElementById("leadConsentService").checked = false;
-                document.getElementById("leadConsentMarketing").checked = false;
-            }
-        });
-
-        function handleLeadSubmit(event) {
-            event.preventDefault();
-            
-            const helpCheckboxes = document.querySelectorAll('.help-checkbox');
-            let isChecked = false;
-            helpCheckboxes.forEach((cb) => {
-                if (cb.checked) isChecked = true;
-            });
-
-            if (!isChecked) {
-                document.getElementById('helpError').style.display = 'block';
-                return false;
-            } else {
-                document.getElementById('helpError').style.display = 'none';
-            }
-
-            const legalCheckbox = document.getElementById('legalAcceptance');
-            if (!legalCheckbox.checked) {
-                document.getElementById('legalError').style.display = 'block';
-                return false;
-            } else {
-                document.getElementById('legalError').style.display = 'none';
-            }
-
-            document.getElementById('leadFormCard').style.display = 'none';
-            document.getElementById('leadSuccessMessage').style.display = 'block';
-            
-            return false;
-        }
-    </script>
     <script
         src="https://widgets.leadconnectorhq.com/loader.js"
         data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
